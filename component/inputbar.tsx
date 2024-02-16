@@ -3,32 +3,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type Props = {
     icon?:any;
+    cusIcon?:any;
     cusDiv?:any;
     cusElement?:any;
     placeholder?:any;
+    value?:any;
     typeInput?:any;
     idName?:any;
 }
 
-const Searchbar:React.FC<Props> = ({icon,idName,cusElement,cusDiv,placeholder,typeInput}) => {
+const InputBar:React.FC<Props> = ({icon,idName,cusIcon,cusElement,cusDiv,placeholder,value,typeInput}) => {
     const idname = idName;
   
     return (
       <div className={cusDiv}>
         <FontAwesomeIcon icon={icon}
-        style={{position:'absolute',left:'0px',zIndex:'1', color:'gray', fontSize:'2rem',paddingLeft:'3rem'}}
+        className={cusIcon}
         />
 
         <input 
-          type='text'
+          type={typeInput}
           id={idname}
           name={idname}
           placeholder={placeholder}
+          value={value}
           className={cusElement}
         />
       </div>
-    
   )
 }
 
-export default Searchbar
+export default InputBar
