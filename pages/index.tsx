@@ -21,32 +21,35 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-content mx-auto content">
+        <div className="w-content mx-auto border border-rose-600">
           <div className="contentSearch">
             <p className="tracking-widest hText1">
               WE ARE HERE FOR HELP WHAT ARE YOU LOOKING FOR?
             </p>
 
-            <div className="flex flex-col justify-center items-center">
-              <div className='flex justify-center items-center '>
+            <div className="flex flex-col justify-center items-center border border-rose-600">
+              <div className='tlAnimate flex relative justify-center items-center '>
                 <p className="castellar ltSize ">
                   LAB
                 </p>
-                <p className="2xl:ml-20 lg:ml-10 md:ml-8 ltSize">
-                  TEST
-                </p>  
-                  <FontAwesomeIcon icon={faCaretRight} className="ml-5 text-base 2xl:text-9xl md:text-7xl md:ml-3 mobile-caretRight"/>
+
+                <div className="mark 2xl:ml-20 lg:ml-10 md:ml-8 ltSize">
+                  <p className="testAnimate ">TEST</p>
+                  <p className="locationAnimate">LOCATION</p>
+                </div> 
+
+                  <FontAwesomeIcon icon={faCaretRight} className=" absolute right-0 bottom-0 rotate-45 2xl:text-3xl md:text-7xl md:ml-3"/>
               </div>
-              
-              <InputBar
+            </div>
+
+            <InputBar
                 icon={faMagnifyingGlass}
                 cusIcon={'magnifyIcon'}
                 typeInput='search'
                 placeholder="Search for tests or location..."
                 cusElement={'headerSearchBar'}
-              cusDiv={'w-full flex justify-center items-center relative'}
+              cusDiv={'w-5/12 flex justify-center items-center relative'}
               />
-            </div>
           </div>   
         </div>
 

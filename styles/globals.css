@@ -86,6 +86,157 @@ body{
   transition-duration: 0.2s;
 }
 
+/* 111 */
+
+/* .testAnimate:hover::after {
+  content: 'LOCATION';
+} 
+
+.testAnimate {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.testAnimate span {
+  
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.testAnimate::before,
+.testAnimate::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.testAnimate::after {
+  content: 'LOCATION';
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .5s cubic-bezier(0.76, 0, 0.24, 1);
+  color: black;
+}
+
+
+
+.testAnimate:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.testAnimate:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.testAnimate:hover span {
+  transform: translate3d(-200%, 0, 0);
+} */
+
+/* ซ้ายขวา */
+
+/* .locationAnimate {
+  opacity: 0;
+  border: 2px dotted;
+  transform: translateX(100%);
+  transition: opacity 2s ease-in-out, transform 1s ease-in-out;
+}
+
+.tlAnimate:hover .testAnimate {
+  display: none;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.tlAnimate:hover .locationAnimate {
+  cursor: pointer;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.mark {
+  transition: transform 1s ease-in-out;
+}
+
+.tlAnimate:hover .mark {
+  transform: translateX(-20px);
+} */
+
+/* ขึ้นลง */
+
+/* .locationAnimate {
+  display: none;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
+}
+
+.tlAnimate:hover .testAnimate {
+  transition: transform 1s ease-in-out;
+  display: none;
+}
+
+.tlAnimate:hover .locationAnimate {
+  cursor: pointer;
+  display: inline-block;
+  transform: translateX(0%);
+}
+
+.mark {
+  transition: transform 0.5s ease-in-out;
+}
+
+.tlAnimate:hover .mark {
+  transform: translateY(-20px);
+} */
+
+.mark {
+  /* display: flex;
+  perspective: 1000px; */
+}
+
+.testAnimate,
+.locationAnimate {
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+  display: inline-flex;
+}
+
+.testAnimate {
+  transform: translateZ(50px);
+}
+
+.locationAnimate {
+  /* transform: rotateX(-90deg) translateZ(-50px); */
+  transform: translateX(-100%) translateZ(-50px);
+  display: none;
+}
+
+.mark:hover .testAnimate {
+  /* transform: rotateX(89deg); */
+  transform: translateX(100%) translateZ(50px);
+  display: none;
+}
+
+.mark:hover .locationAnimate {
+  /* transform: rotateX(0deg); */
+  transform: translateX(0%) translateZ(-50px);
+  display: inline-flex;
+}
+
+
+/* //////////////////////////// */
+
 .navMenu {
   display: flex;
   justify-content: end;
@@ -143,9 +294,6 @@ body{
     border-radius: 10px;
     font-size: 12px;
     padding: 0 10px 0 2.5rem;
-  }
-  .mobile-caretRight{
-    /* display: none; */
   }
   .magnifyIcon {
     font-size: 12px;
